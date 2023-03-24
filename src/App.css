@@ -1,18 +1,6 @@
 * {
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-input {
-    color: #000;
-}
-
-a {
-    color: #fff;
-}
-body {
-    background-color: #EAEDED;
 }

@@ -1,19 +1,20 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Cart from "./pages/cart/Cart";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home/Home";
+import List from "./pages/list/List";
+import Hotel from "./pages/hotel/Hotel";
+import Login from "./pages/login/Login";
+
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </Router>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/hotels" element={<List />} />
+        <Route path="/hotels/:hotel" element={<Hotel />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
