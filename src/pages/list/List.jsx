@@ -9,6 +9,7 @@ import SearchItem from "../../components/searchItem/SearchItem";
 import useFetch from "../../hooks/useFetch";
 
 const List = () => {
+  const api = process.env.REACT_APP_PROXY;
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.destination);
   const [dates, setDates] = useState(location.state.dates);
@@ -16,8 +17,8 @@ const List = () => {
   const [options, setOptions] = useState(location.state.options);
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
-  const { data, loading, error, reFetch } = useFetch(
-    `/hotels?city=${destination}&min=${min || 0}&max=${max || 9999}`
+  const { data, loading, error } = useFetch(
+    `${api}/hotels?city=${destination}&min=${min || 0}&max=${max || 9999}`
   );
 
   const handelClick = () => {};

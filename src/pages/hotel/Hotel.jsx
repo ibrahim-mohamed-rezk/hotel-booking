@@ -14,11 +14,13 @@ import { AuthContext } from "../../context/AuthContext";
 import Reserve from "../../components/reserve/Reserve";
 
 const Hotel = () => {
+  const api = process.env.REACT_APP_PROXY;
+  console.log(api);
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const id = useLocation().pathname.split("/")[2];
-  const { data, loading, error, reFetch } = useFetch(`/hotels/find/${id}`);
+  const { data, loading, error } = useFetch(`${api}/hotels/find/${id}`);
   const { dates, options } = useContext(SearchContext);
 
   const milliSecondPerDay = 1000 * 60 * 60 * 24;

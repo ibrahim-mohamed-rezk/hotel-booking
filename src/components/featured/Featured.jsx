@@ -2,8 +2,9 @@ import useFetch from "../../hooks/useFetch";
 import "./featured.css";
 
 const Featured = () => {
-  const { data, loading, error, reFetch } = useFetch(
-    "/hotels/countByCity?cities=london,madrid,berlin"
+  const api = process.env.REACT_APP_PROXY;
+  const { data, loading, error } = useFetch(
+    `${api}/hotels/countByCity?cities=london,madrid,berlin`
   );
   return (
     <>
