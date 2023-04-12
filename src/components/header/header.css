@@ -18,6 +18,7 @@
   
   .headerList {
     display: flex;
+    width: 100%;
     gap: 40px;
     margin-bottom: 50px;
   }
@@ -58,8 +59,9 @@
     border-radius: 5px;
     position: absolute;
     bottom: -25px;
-    width: 100%;
-    max-width: 1024px;
+    left: 0;
+    right: 0;
+
   }
   
   .headerIcon {
@@ -125,4 +127,28 @@
   
   .optionCounterButton:disabled {
     cursor: not-allowed;
+  }
+
+  @media(width < 550px){
+    .headerSearch{
+      left: auto;
+      right: auto;
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      gap: 20px;
+      max-width: 1024px;overflow: hidden;
+    }
+
+    .headerSearchItem{
+      width: 90%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .headerBtn{
+      width: 95%;
+      border-radius: 10px;
+    }
+
   }

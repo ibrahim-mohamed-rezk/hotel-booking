@@ -15,7 +15,6 @@ import Reserve from "../../components/reserve/Reserve";
 
 const Hotel = () => {
   const api = process.env.REACT_APP_PROXY;
-  console.log(api);
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);

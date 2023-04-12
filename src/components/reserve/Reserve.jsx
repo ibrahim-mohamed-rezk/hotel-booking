@@ -55,9 +55,15 @@ const Reserve = ({ setOpen, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`${api}/rooms/availability/${roomId}`, {
-            dates: alldates,
-          });
+          const res = axios.put(
+            `${api}/rooms/availability/${roomId}`,
+            {
+              dates: alldates,
+            },
+            {
+              withCredentials: true,
+            }
+          );
           return res.data;
         })
       );
@@ -82,7 +88,7 @@ const Reserve = ({ setOpen, hotelId }) => {
             </div>
             <div className="rSelectRooms">
               {item.roomNumbers.map((roomNumber) => (
-                <div className="room">
+                <div key={`${item._id}-${roomNumber._id}`} className="room">
                   <label>{roomNumber.number}</label>
                   <input
                     type="checkbox"
