@@ -27,7 +27,7 @@ const List = () => {
     <div>
       <Navbar />
       <Header type="list" />
-      <div className="listContainer">
+      <div className="container lsContainer">
         <div className="listWrapper">
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>

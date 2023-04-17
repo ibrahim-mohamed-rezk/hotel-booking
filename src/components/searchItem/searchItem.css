@@ -107,3 +107,11 @@
     cursor: pointer;
     border-radius: 5px;
   }
+
+
+  @media (width < 800px) {
+    .siImg, .siDetails, .siDesc{
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
