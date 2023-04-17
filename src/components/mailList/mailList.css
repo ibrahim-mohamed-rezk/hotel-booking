@@ -1,6 +1,6 @@
 .mail{
     width: 100%;
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
     background-color: #003580;
     color: white;
     display: flex;
@@ -11,13 +11,20 @@
     box-sizing: border-box;
     max-width: 1024px;
   }
+
+  .mailInputContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .mailInputContainer>input{
-    width: 300px;
+    width: 90%;
     height: 30px;
     padding: 10px;
     border: none;
-    margin-right: 10px;
+    margin: 0 auto;
     border-radius: 5px;
   }
   
@@ -30,4 +37,18 @@
     border-radius: 5px;
     cursor: pointer;
     padding: 0 3px;
+    margin-left: 10px;
+  }
+
+  @media (width < 550px){
+    .mailInputContainer{
+      flex-direction: column;
+      align-items: center;
+      gap: .5em;
+    }
+
+    .mailInputContainer>button{
+      padding: 0 10px;
+      margin-left: 0;
+    }
   }

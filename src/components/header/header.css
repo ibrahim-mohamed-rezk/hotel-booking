@@ -13,7 +13,7 @@
   }
   
   .headerContainer.listMode {
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px;
   }
   
   .headerList {
@@ -21,6 +21,19 @@
     width: 100%;
     gap: 40px;
     margin-bottom: 50px;
+  }
+
+  .navbar-nav{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-link, .navbar-toggler, .navbar-toggler .navbar-toggler-icon {
+    color: #fff !important;
+  }
+  
+  .navbar-toggler:focus{
+    box-shadow: none;
   }
   
   .headerListItem {
@@ -57,8 +70,8 @@
     justify-content: space-around;
     padding: 10px 0px;
     border-radius: 5px;
-    position: absolute;
-    bottom: -25px;
+    /* position: absolute; */
+    /* bottom: -25px; */
     left: 0;
     right: 0;
 
@@ -129,7 +142,32 @@
     cursor: not-allowed;
   }
 
-  @media(width < 550px){
+    @media(width < 991px){
+      .navbar-toggler, .navbar-toggler .navbar-toggler-icon{
+        z-index: 100;
+        background-color: #004AB3 !important;
+      }
+      nav {
+        width: 100%;
+      }
+    .navbar-collapse{
+      background: #fff !important;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+    }
+
+    .nav-link{
+      color: #1A1A1A !important;
+    }
+  }
+
+
+  @media(width < 600px){
     .headerSearch{
       left: auto;
       right: auto;

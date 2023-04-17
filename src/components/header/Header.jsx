@@ -1,10 +1,11 @@
 import "./header.css";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import { FaBed, FaPlane, FaCar, FaTaxi, FaCalendarAlt } from "react-icons/fa";
 import { IoMdMan } from "react-icons/io";
 import { DateRange } from "react-date-range";
 import { useState } from "react";
-import "react-date-range/dist/styles.css"; // main css file
-import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
@@ -45,71 +46,46 @@ const Header = ({ type }) => {
   };
   return (
     <div className="header">
-      <div
-        className={
-          type === "list" ? "headerContainer listMode" : "headerContainer"
-        }
-      >
+      <div className={type === "list" ? " container listMode" : " container"}>
         <div className="headerList">
-          <nav className="navbar navbar-expand-lg">
-            <div className="container-fluid">
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      <div className="headerListItem active">
-                        <FaBed />
-                        <span>Styes</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      <div className="headerListItem">
-                        <FaPlane />
-                        <span>Flights</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      <div className="headerListItem">
-                        <FaCar />
-                        <span>Car rentals</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      <div className="headerListItem">
-                        <FaBed />
-                        <span>Attraction</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      <div className="headerListItem">
-                        <FaTaxi />
-                        <span>Airport taxis</span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+          <Navbar variant="dark" expand="lg">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="#home">
+                  {" "}
+                  <div className="headerListItem active">
+                    <FaBed />
+                    <span>Styes</span>
+                  </div>
+                </Nav.Link>
+                <Nav.Link href="#link">
+                  <div className="headerListItem">
+                    <FaPlane />
+                    <span>Flights</span>
+                  </div>
+                </Nav.Link>
+                <Nav.Link href="#link">
+                  <div className="headerListItem">
+                    <FaCar />
+                    <span>Car rentals</span>
+                  </div>
+                </Nav.Link>
+                <Nav.Link href="#link">
+                  <div className="headerListItem">
+                    <FaBed />
+                    <span>Attraction</span>
+                  </div>
+                </Nav.Link>
+                <Nav.Link href="#link">
+                  <div className="headerListItem">
+                    <FaTaxi />
+                    <span>Airport taxis</span>
+                  </div>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
         </div>
         {type !== "list" && (
           <>
