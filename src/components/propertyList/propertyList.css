@@ -36,4 +36,13 @@
       align-items: center;
       width: 95%;
     }
+
+    .pListItem{
+      width: 85%;
+    }
+
+    .pListTitles{
+      margin-top: 10px;
+      padding: 5px;
+    }
   }

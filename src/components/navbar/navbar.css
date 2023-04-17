@@ -3,15 +3,8 @@
   background-color: #003580;
   display: flex;
   padding: 10px;
-}
+  color: white ;
 
-.navContainer {
-  width: 100%;
-  max-width: 1024px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .logo {

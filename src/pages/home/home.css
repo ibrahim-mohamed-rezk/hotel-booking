@@ -13,3 +13,9 @@
     text-align: left;
     margin: 0 auto;
   }
+
+  @media (width < 600px){
+    .homeTitle{
+      text-align: center;
+    }
+  }
