@@ -21,8 +21,6 @@ const List = () => {
     `${api}/hotels?city=${destination}&min=${min || 0}&max=${max || 9999}`
   );
 
-  const handelClick = () => {};
-
   return (
     <div>
       <Navbar />
@@ -33,7 +31,13 @@ const List = () => {
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
               <label>Destination</label>
-              <input placeholder={destination} type="text" />
+              <input
+                placeholder={destination}
+                type="text"
+                onChange={(e) =>
+                  setDestination(e.target.value.toLocaleLowerCase())
+                }
+              />
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>
@@ -101,7 +105,6 @@ const List = () => {
                 </div>
               </div>
             </div>
-            <button onClick={handelClick}>Search</button>
           </div>
           <div className="listResult">
             {loading ? (
