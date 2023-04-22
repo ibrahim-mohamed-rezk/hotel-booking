@@ -1,192 +1,230 @@
 .header {
-    background-color: #003580;
-    color: white;
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .headerContainer {
-    width: 100%;
-    max-width: 1024px;
-    margin: 20px 0px 100px 0px;
-  }
-  
-  .headerContainer.listMode {
-    margin: 20px 0px;
-  }
-  
-  .headerList {
-    display: flex;
-    width: 100%;
-    gap: 40px;
-    margin-bottom: 50px;
-  }
+  background-color: #003580;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
-  .navbar-nav{
-    align-items: center;
-    justify-content: center;
-  }
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px 0px 100px 0px;
+}
 
-  .nav-link, .navbar-toggler, .navbar-toggler .navbar-toggler-icon {
-    color: #fff !important;
+.headerContainer.listMode {
+  margin: 20px 0px;
+}
+
+.headerList {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.navbar-nav {
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link,
+.navbar-toggler,
+.navbar-toggler .navbar-toggler-icon {
+  color: #fff !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.headerDesc {
+  margin: 20px 0px;
+}
+
+.headerBtn {
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.headerSearch {
+  height: 30px;
+  background-color: white;
+  border: 3px solid #febb02;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.headerIcon {
+  color: lightgray;
+}
+
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerSearchInput {
+  border: none;
+  outline: none;
+}
+
+.headerSearchText {
+  color: lightgray;
+  cursor: pointer;
+}
+
+.date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+
+.options {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+
+@media (width < 991px) {
+  .navbar-toggler,
+  .navbar-toggler .navbar-toggler-icon {
+    z-index: 100;
+    background-color: #004ab3 !important;
   }
-  
-  .navbar-toggler:focus{
-    box-shadow: none;
+  nav {
+    width: 100%;
   }
-  
-  .headerListItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .headerListItem.active {
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 20px;
-  }
-  
-  .headerDesc {
-    margin: 20px 0px;
-  }
-  
-  .headerBtn {
-    background-color: #0071c2;
-    color: white;
-    font-weight: 500;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .headerSearch {
-    height: 30px;
-    background-color: white;
-    border: 3px solid #febb02;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 0px;
-    border-radius: 5px;
-    /* position: absolute; */
-    /* bottom: -25px; */
+  .navbar-collapse {
+    background: #fff !important;
+    width: 100%;
+    position: absolute;
     left: 0;
     right: 0;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+  }
 
+  .nav-link {
+    color: #1a1a1a !important;
   }
-  
-  .headerIcon {
-    color: lightgray;
+}
+
+@media (width < 775px) {
+  .headerSearch {
+    left: auto;
+    right: auto;
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    max-width: 1024px;
+    overflow: hidden;
+    position: initial;
   }
-  
+
   .headerSearchItem {
-    display: flex;
+    width: 90%;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
   }
-  
-  .headerSearchInput {
-    border: none;
-    outline: none;
+
+  .headerBtn {
+    width: 95%;
+    border-radius: 10px;
   }
-  
-  .headerSearchText {
-    color: lightgray;
-    cursor: pointer;
+
+  .backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  
-  .date {
-    position: absolute;
-    top: 50px;
-    z-index: 2;
-  }
-  
-  .options {
-    z-index: 2;
-    position: absolute;
-    top: 50px;
+
+  .date, .options {
+    position: fixed;
+    z-index: 500;
     background-color: white;
-    color: gray;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    left: 5%;
+    top: 30%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+
+  .rdrMonth, .rdrMonth .rdrWeekDays, .rdrDays{
+    max-width: 90% !important;
+  }
+
+  .rdrMonth{
+    margin: 0 auto;
+  }
+
+  .optionItem{
+    margin: 10px auto;
+    padding: 5px;
   }
   
-  .optionItem {
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-  }
-  
-  .optionCounter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
-    color: black;
-  }
-  
-  .optionCounterButton {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #0071c2;
-    color: #0071c2;
-    cursor: pointer;
-    background-color: white;
-  }
-  
-  .optionCounterButton:disabled {
-    cursor: not-allowed;
-  }
-
-    @media(width < 991px){
-      .navbar-toggler, .navbar-toggler .navbar-toggler-icon{
-        z-index: 100;
-        background-color: #004AB3 !important;
-      }
-      nav {
-        width: 100%;
-      }
-    .navbar-collapse{
-      background: #fff !important;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      left: 0;
-      border-radius: 10px;
-    }
-
-    .nav-link{
-      color: #1A1A1A !important;
-    }
-  }
-
-
-  @media(width < 600px){
-    .headerSearch{
-      left: auto;
-      right: auto;
-      width: 100%;
-      flex-direction: column;
-      height: auto;
-      gap: 20px;
-      max-width: 1024px;overflow: hidden;
-    }
-
-    .headerSearchItem{
-      width: 90%;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .headerBtn{
-      width: 95%;
-      border-radius: 10px;
-    }
-
-  }
+}

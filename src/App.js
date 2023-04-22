@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
