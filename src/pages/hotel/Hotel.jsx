@@ -86,7 +86,7 @@ const Hotel = () => {
       {loading ? (
         "loading..."
       ) : (
-        <div className="hotelContainer">
+        <div className="container hContainer">
           {open && (
             <div className="slider">
               <HiXCircle className="close" onClick={() => setOpen(false)} />
